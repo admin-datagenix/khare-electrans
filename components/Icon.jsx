@@ -1,0 +1,63 @@
+import {
+  FiActivity,
+  FiAlertTriangle,
+  FiArrowUpCircle,
+  FiAward,
+  FiCalendar,
+  FiCheckCircle,
+  FiChevronLeft,
+  FiChevronRight,
+  FiCpu,
+  FiDroplet,
+  FiEye,
+  FiGlobe,
+  FiInfo,
+  FiMail,
+  FiMapPin,
+  FiMenu,
+  FiPackage,
+  FiPhone,
+  FiSend,
+  FiSettings,
+  FiShield,
+  FiTarget,
+  FiTool,
+  FiUsers,
+  FiX,
+  FiZap,
+} from "react-icons/fi";
+
+const icons = {
+  activity: FiActivity,
+  alert: FiAlertTriangle,
+  arrowUp: FiArrowUpCircle,
+  award: FiAward,
+  calendar: FiCalendar,
+  check: FiCheckCircle,
+  left: FiChevronLeft,
+  right: FiChevronRight,
+  cpu: FiCpu,
+  droplet: FiDroplet,
+  eye: FiEye,
+  globe: FiGlobe,
+  info: FiInfo,
+  mail: FiMail,
+  map: FiMapPin,
+  menu: FiMenu,
+  package: FiPackage,
+  phone: FiPhone,
+  send: FiSend,
+  settings: FiSettings,
+  shield: FiShield,
+  target: FiTarget,
+  tool: FiTool,
+  users: FiUsers,
+  close: FiX,
+  zap: FiZap,
+};
+
+export default function Icon({ name, size = 18, ...props }) {
+  const IconComponent = icons[name] || FiActivity;
+
+  return <IconComponent size={size} {...props} />;
+}
