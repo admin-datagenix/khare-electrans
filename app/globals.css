@@ -48,6 +48,8 @@ button {
 
 img {
   max-width: 100%;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .page {
@@ -569,21 +571,6 @@ img {
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
 }
 
-.about-image::before {
-  content: "";
-  position: absolute;
-  inset: -5%;
-  border-radius: 50px;
-  background: linear-gradient(135deg, var(--cyan), var(--blue));
-  opacity: 0.16;
-  transform: rotate(3deg);
-  transition: 0.7s;
-}
-
-.about-image:hover::before {
-  transform: rotate(0deg) scale(0.98);
-}
-
 .about-image img {
   position: relative;
   z-index: 1;
@@ -593,11 +580,6 @@ img {
   object-position: center center;
   border-radius: 46px;
   display: block;
-  transition: 1s;
-}
-
-.about-image:hover img {
-  transform: scale(1.07);
 }
 
 .year-card {
@@ -1477,7 +1459,7 @@ img {
   position: relative;
   width: 100%;
   height: 360px;
-  background: #fff;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1517,35 +1499,15 @@ img {
 
 .clickable-image {
   position: relative;
-  cursor: zoom-in;
-  touch-action: manipulation;
+  pointer-events: none;
 }
 
 .clickable-image img {
   transition: transform 0.35s ease;
 }
 
-.clickable-image:hover img {
-  transform: scale(1.025);
-}
-
 .image-zoom-hint {
-  position: absolute;
-  right: 14px;
-  bottom: 14px;
-  padding: 7px 11px;
-  border-radius: 8px;
-  background: rgba(0, 0, 0, 0.72);
-  color: #fff;
-  font-size: 11px;
-  font-weight: 700;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-
-.clickable-image:hover .image-zoom-hint {
-  opacity: 1;
+  display: none;
 }
 
 /* =========================================================
@@ -1839,6 +1801,11 @@ img {
     height: 72px;
   }
 
+  .brand-logo {
+    width: 180px;
+    height: 50px;
+  }
+
   .nav-links {
     display: none;
   }
@@ -2070,8 +2037,8 @@ img {
   }
 
   .brand-logo {
-    width: 42px;
-    height: 42px;
+    width: 150px;
+    height: 40px;
   }
 
   .brand-name {
@@ -2389,11 +2356,12 @@ img {
     width: 100%;
     height: 330px !important;
     min-height: 330px !important;
-    background: #fff !important;
+    background: transparent !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     overflow: hidden !important;
+    pointer-events: auto !important;
   }
 
   .recognition-image img {
@@ -2715,4 +2683,9 @@ img {
   .form-card {
     padding: 22px 15px;
   }
+}
+/* Footer KHARE Logo - Blue */
+.footer .brand-logo img {
+  filter: brightness(0) saturate(100%) invert(46%) sepia(98%) saturate(1900%)
+    hue-rotate(166deg) brightness(92%) contrast(101%);
 }

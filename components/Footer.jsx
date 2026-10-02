@@ -9,8 +9,8 @@ export default function Footer() {
           {/* BRAND */}
           <div className="footer-brand">
             <Link href="/" className="brand">
-              <span className="brand-logo">
-                <img src="/images/logo-khare3.png" alt="KHARE logo" />
+              <span className="brand-logo  footer-logo">
+                <img src="/images/logo-khare2.jpg" alt="KHARE logo" />
               </span>
 
               <span className="brand-name"></span>
