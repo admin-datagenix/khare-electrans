@@ -161,8 +161,8 @@ export default function ProductCatalog() {
                     setSelected(product)
                   }
                 >
-                  <Icon name="info" />
-                  View Specifications
+                  <Icon name="info" size={20} aria-hidden />
+                  <span>View Specifications</span>
                 </button>
               </div>
 

@@ -110,30 +110,18 @@ export default function Footer() {
             © {new Date().getFullYear()} KHARE Elec-Trans. All rights reserved.
           </span>
 
-          {/* LINKS - CENTER */}
-          <div className="footer-links">
-            <a href="#">Privacy Policy</a>
-
-            <a href="#">Terms of Service</a>
-
+          {/* DATAGENIXAI - RIGHT */}
+          <span className="footer-credit">
+            Designed &amp; Developed by{" "}
             <a
-              href="http://www.khareelectrans.co.in"
+              className="footer-credit-brand"
+              href="https://www.datagenix.in/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              www.khareelectrans.co.in
+              DatagenixAI
             </a>
-          </div>
-
-          {/* DATAGENIXAI - RIGHT */}
-          <a
-            href="https://www.datagenix.in/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer-credit"
-          >
-            Designed &amp; Developed by DatagenixAI
-          </a>
+          </span>
         </div>
       </div>
     </footer>
