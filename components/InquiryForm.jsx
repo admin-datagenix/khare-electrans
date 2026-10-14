@@ -61,9 +61,6 @@ export default function InquiryForm() {
                     Office Ph: <a href="tel:+919552563522">+91 95525 63522</a>,
                     Works: <a href="tel:+919881143522">+91 98811 43522</a>
                   </p>
-                  <p style={{ fontSize: 13, opacity: 0.6 }}>
-                    <a href="tel:+912346250484">+91 9552563522</a>
-                  </p>
                 </div>
               </div>
 

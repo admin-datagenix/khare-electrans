@@ -111,17 +111,14 @@ export default function Footer() {
           </span>
 
           {/* DATAGENIXAI - RIGHT */}
-          <span className="footer-credit">
-            Designed &amp; Developed by{" "}
-            <a
-              className="footer-credit-brand"
-              href="https://www.datagenix.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              DatagenixAI
-            </a>
-          </span>
+          <a
+            href="https://www.datagenix.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-credit"
+          >
+            Designed &amp; Developed by DatagenixAI
+          </a>
         </div>
       </div>
     </footer>

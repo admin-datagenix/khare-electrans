@@ -2784,10 +2784,14 @@ img {
 .footer-credit {
   justify-self: end;
   font-size: 12px;
-  color: #65738a;
+  color: #00bfff;
+  font-weight: 600;
+  text-decoration: none;
   white-space: nowrap;
+  transition: color 0.3s ease;
 }
 
+.footer-credit a,
 .footer-credit-brand {
   color: #00bfff;
   font-size: 12px;
@@ -2797,6 +2801,8 @@ img {
   transition: color 0.3s ease;
 }
 
+.footer-credit:hover,
+.footer-credit a:hover,
 .footer-credit-brand:hover {
   color: #ffffff;
 }
@@ -2841,7 +2847,7 @@ img {
 .whatsapp-float {
   position: fixed;
   right: 28px;
-  bottom: 28px;
+  bottom: 50px;
   width: 58px;
   height: 58px;
   border-radius: 50%;
@@ -2881,7 +2887,7 @@ img {
 @media (max-width: 768px) {
   .whatsapp-float {
     right: 20px;
-    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+    bottom: calc(48px + env(safe-area-inset-bottom, 0px));
     width: 54px;
     height: 54px;
     box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.35), 0 4px 14px rgba(37, 211, 102, 0.42), 0 2px 6px rgba(0, 0, 0, 0.35);
@@ -2897,7 +2903,7 @@ img {
 @media (max-width: 400px) {
   .whatsapp-float {
     right: 16px;
-    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    bottom: calc(44px + env(safe-area-inset-bottom, 0px));
     width: 50px;
     height: 50px;
     box-shadow: 0 0 0 2.5px rgba(37, 211, 102, 0.35), 0 4px 12px rgba(37, 211, 102, 0.4);
