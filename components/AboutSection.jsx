@@ -23,20 +23,15 @@ export default function AboutSection() {
   return (
     <section id="about" className="section alt">
       <div className="container">
-
         <div className="about-grid">
-
           <div className="about-copy reveal">
-
             <div className="section-label">
               <span className="line" /> Modern Engineering Legacy
             </div>
 
             <h2 className="section-title">
               A Trusted Partner In{" "}
-              <span className="gradient-text">
-                Power Distribution
-              </span>
+              <span className="gradient-text">Power Distribution</span>
             </h2>
 
             <p>
@@ -44,17 +39,13 @@ export default function AboutSection() {
               delivering high-performance electrical solutions for industries,
               utilities, and infrastructure projects. With advanced
               manufacturing facilities, skilled professionals, and strict
-              quality standards, we provide reliable and customized
-              transformer solutions that meet customer expectations.
+              quality standards, we provide reliable and customized transformer
+              solutions that meet customer expectations.
             </p>
 
             <div className="feature-cards">
-
               <div className="feature-card">
-                <Icon
-                  name="settings"
-                  className="feature-icon"
-                />
+                <Icon name="settings" className="feature-icon" />
 
                 <h4>Precision Built</h4>
 
@@ -65,10 +56,7 @@ export default function AboutSection() {
               </div>
 
               <div className="feature-card">
-                <Icon
-                  name="shield"
-                  className="feature-icon"
-                />
+                <Icon name="shield" className="feature-icon" />
 
                 <h4>KHARE Quality</h4>
 
@@ -77,15 +65,12 @@ export default function AboutSection() {
                   our labs.
                 </p>
               </div>
-
             </div>
           </div>
 
-
           <div className="about-image reveal">
-
             <img
-              src="/images/about/about-facility.jpg"
+              src="/images/about/about-facility1.png"
               alt="KHARE Engineering Facility"
             />
 
@@ -93,19 +78,12 @@ export default function AboutSection() {
               <strong>25+</strong>
               <span>Years of Industrial Excellence</span>
             </div>
-
           </div>
-
         </div>
 
-
         <div className="vision-grid">
-
           <div className="vision-card">
-            <Icon
-              name="eye"
-              className="vision-icon"
-            />
+            <Icon name="eye" className="vision-icon" />
 
             <h3>Our Vision</h3>
 
@@ -117,12 +95,8 @@ export default function AboutSection() {
             </p>
           </div>
 
-
           <div className="vision-card alt">
-            <Icon
-              name="target"
-              className="vision-icon"
-            />
+            <Icon name="target" className="vision-icon" />
 
             <h3>Our Mission</h3>
 
@@ -133,29 +107,24 @@ export default function AboutSection() {
               sustainability, and operational excellence.
             </p>
           </div>
-
         </div>
-
 
         {/* ================= WHAT WE DO ================= */}
 
         <div className="what-we-do reveal">
-
           <div className="section-label">
             <span className="line" /> What We Do
           </div>
 
           <h2 className="section-title">
             Complete Transformer{" "}
-            <span className="gradient-text">
-              Solutions
-            </span>
+            <span className="gradient-text">Solutions</span>
           </h2>
 
           <p>
             We specialize in the design, manufacturing, testing, supply,
-            installation, and maintenance of power and distribution
-            transformers for industrial, commercial, and utility applications.
+            installation, and maintenance of power and distribution transformers
+            for industrial, commercial, and utility applications.
           </p>
 
           <p>
@@ -163,31 +132,24 @@ export default function AboutSection() {
             performance, we provide customized transformer solutions that meet
             national and international standards.
           </p>
-
         </div>
-
 
         {/* ================= RECOGNITION & CERTIFICATION ================= */}
 
         <div className="recognition-section reveal">
-
           <div className="section-label">
             <span className="line" /> Recognition & Certification
           </div>
 
           <h2 className="section-title">
             Trusted Quality.{" "}
-            <span className="gradient-text">
-              Recognized Excellence.
-            </span>
+            <span className="gradient-text">Recognized Excellence.</span>
           </h2>
 
           <div className="recognition-grid">
-
             {/* ================= AWARD ================= */}
 
             <div className="recognition-card">
-
               <div
                 className="recognition-image clickable-image"
                 onClick={() =>
@@ -202,9 +164,7 @@ export default function AboutSection() {
                   alt="Maharashtra Government Gaurav-Chin Award"
                 />
 
-                <span className="image-zoom-hint">
-                  Click to view
-                </span>
+                <span className="image-zoom-hint">Click to view</span>
               </div>
 
               <div className="recognition-content">
@@ -215,14 +175,11 @@ export default function AboutSection() {
                   industrial contribution.
                 </p>
               </div>
-
             </div>
-
 
             {/* ================= ISO CERTIFICATE ================= */}
 
             <div className="recognition-card">
-
               <div
                 className="recognition-image clickable-image"
                 onClick={() =>
@@ -237,9 +194,7 @@ export default function AboutSection() {
                   alt="ISO 9001:2015 Certificate"
                 />
 
-                <span className="image-zoom-hint">
-                  Click to view
-                </span>
+                <span className="image-zoom-hint">Click to view</span>
               </div>
 
               <div className="recognition-content">
@@ -250,15 +205,10 @@ export default function AboutSection() {
                   manufacture, supply and in-house servicing of transformers.
                 </p>
               </div>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
 
       {/* ================= IMAGE LIGHTBOX ================= */}
 
@@ -271,7 +221,6 @@ export default function AboutSection() {
             }
           }}
         >
-
           <button
             className="image-lightbox-close"
             aria-label="Close image"
@@ -281,15 +230,10 @@ export default function AboutSection() {
           </button>
 
           <div className="image-lightbox-content">
-            <img
-              src={selectedImage.src}
-              alt={selectedImage.alt}
-            />
+            <img src={selectedImage.src} alt={selectedImage.alt} />
           </div>
-
         </div>
       )}
-
     </section>
   );
 }

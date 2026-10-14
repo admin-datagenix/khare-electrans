@@ -9,8 +9,8 @@ export default function Footer() {
           {/* BRAND */}
           <div className="footer-brand">
             <Link href="/" className="brand">
-              <span className="brand-logo">
-                <img src="/images/logo-khare3.png" alt="KHARE logo" />
+              <span className="brand-logo footer-logo">
+                <img src="/images/logo-khare2.jpg" alt="KHARE logo" />
               </span>
 
               <span className="brand-name"></span>
@@ -33,8 +33,8 @@ export default function Footer() {
               <div>
                 <Icon name="mail" />
                 <span>
-                  <a href="mailto:sales@khareelectrans.co.in">
-                    sales@khareelectrans.co.in
+                  <a href="mailto:khare.shripad114@gmail.com">
+                    khare.shripad114@gmail.com
                   </a>
                 </span>
               </div>
@@ -42,14 +42,13 @@ export default function Footer() {
               <div>
                 <Icon name="phone" />
                 <span>
-                  <a href="tel:+912346250336">+91 2346 250336</a>
+                  <a href="tel:+919552563522">+91 95525 63522</a>
                 </span>
               </div>
             </div>
           </div>
 
           {/* CORE PRODUCTS */}
-
           <div>
             <h4 className="footer-title">Core Products</h4>
 
@@ -75,7 +74,6 @@ export default function Footer() {
           </div>
 
           {/* ESSENTIAL SERVICES */}
-
           <div>
             <h4 className="footer-title">Essential Services</h4>
 
@@ -105,13 +103,14 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* BOTTOM */}
-
+        {/* FOOTER BOTTOM */}
         <div className="footer-bottom">
-          <span>
+          {/* COPYRIGHT - LEFT */}
+          <span className="footer-copyright">
             © {new Date().getFullYear()} KHARE Elec-Trans. All rights reserved.
           </span>
 
+          {/* LINKS - CENTER */}
           <div className="footer-links">
             <a href="#">Privacy Policy</a>
 
@@ -120,11 +119,21 @@ export default function Footer() {
             <a
               href="http://www.khareelectrans.co.in"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               www.khareelectrans.co.in
             </a>
           </div>
+
+          {/* DATAGENIXAI - RIGHT */}
+          <a
+            href="https://www.datagenix.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-credit"
+          >
+            Designed &amp; Developed by DatagenixAI
+          </a>
         </div>
       </div>
     </footer>

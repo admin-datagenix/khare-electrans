@@ -168,4 +168,61 @@ export const products = [
       "Weatherproof construction available",
     ],
   },
+
+  {
+    id: "p8",
+    slug: "dry-type-transformer",
+    name: "Dry Type Transformer",
+    category: "Standard",
+
+    description:
+      "We manufacture reliable and efficient Dry-Type Transformers designed for safe and dependable power distribution in commercial, industrial, and infrastructure applications. These transformers use air as the cooling medium and do not require liquid insulation, making them suitable for installations where fire safety, low maintenance, and clean operation are important. Our dry-type transformers are engineered for reliable performance, reduced maintenance requirements, excellent insulation performance, and long operational life.",
+
+    shortDescription:
+      "Reliable and efficient dry-type transformers designed for safe, low-maintenance power distribution applications.",
+
+    image: "/images/products/dry-type-transformer.jpg",
+
+    features: [
+      "Capacity: As per project requirements",
+      "Voltage Class: Suitable for LV & MV applications",
+      "Air-cooled / dry-type construction",
+      "No liquid insulation required",
+      "Low maintenance",
+      "Fire-safe design for suitable indoor applications",
+      "No transformer oil leakage",
+      "Robust construction",
+      "Indoor applications",
+      "Commercial, industrial & infrastructure applications",
+    ],
+  },
+
+  {
+    id: "p9",
+    slug: "distribution-transformer",
+    name: "Distribution Transformer",
+    category: "Standard",
+
+    capacity: "16 KVA to 2500 KVA",
+    voltageClass: "Up to 33KV",
+    standard: "IS 1180 & IS 2026",
+
+    description:
+      "We manufacture high-efficiency Distribution Transformers ranging from 16 KVA to 2500 KVA up to 33KV class, designed and tested as per IS 1180 and IS 2026 standards. These transformers are suitable for power distribution networks, industrial units, commercial establishments, and infrastructure projects. Our transformers are engineered for low losses, excellent voltage regulation, reliable performance, and long operational life.",
+
+    shortDescription:
+      "High-efficiency distribution transformers designed for reliable power distribution and long operational life.",
+
+    image: "/images/products/distribution-transformer2.jpg",
+
+    features: [
+      "Capacity: 16 KVA to 2500 KVA",
+      "Voltage Class: Up to 33KV",
+      "Manufactured as per IS 1180 & IS 2026",
+      "Energy efficient design",
+      "Low maintenance",
+      "Robust construction",
+      "Indoor & outdoor applications",
+    ],
+  },
 ];

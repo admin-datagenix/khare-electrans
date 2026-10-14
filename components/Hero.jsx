@@ -58,7 +58,7 @@ export default function Hero() {
           <div className="hero-glow" />
           <div className="hero-image-wrap">
             <img
-              src="/images/hero/hero-transformer.jpg"
+              src="/images/hero/hero-transformer2.png"
               alt="KHARE Power Transformer"
             />
           </div>

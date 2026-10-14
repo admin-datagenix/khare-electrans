@@ -48,6 +48,8 @@ button {
 
 img {
   max-width: 100%;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .page {
@@ -339,13 +341,13 @@ img {
 
 .hero-grid {
   width: 100%;
-  max-width: 1240px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 25px;
 
   display: grid;
-  grid-template-columns: 1fr 0.95fr;
-  gap: 45px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
   align-items: center;
 
   position: relative;
@@ -449,7 +451,7 @@ img {
 
 .hero-visual {
   position: relative;
-  min-height: 520px;
+  min-height: 570px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -457,17 +459,17 @@ img {
 
 .hero-glow {
   position: absolute;
-  inset: 12%;
+  inset: 10%;
   background: linear-gradient(135deg, var(--cyan), var(--blue));
   filter: blur(100px);
-  opacity: 0.09;
+  opacity: 0.11;
   border-radius: 50%;
   animation: pulseGlow 6s infinite;
 }
 
 .hero-image-wrap {
-  width: min(100%, 570px);
-  height: 540px;
+  width: min(100%, 650px);
+  height: 580px;
   position: relative;
 
   display: flex;
@@ -481,8 +483,9 @@ img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: center;
   display: block;
-  filter: drop-shadow(0 0 35px rgba(25, 228, 232, 0.22));
+  filter: drop-shadow(0 0 38px rgba(25, 228, 232, 0.25));
 }
 
 /* =========================================================
@@ -569,21 +572,6 @@ img {
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
 }
 
-.about-image::before {
-  content: "";
-  position: absolute;
-  inset: -5%;
-  border-radius: 50px;
-  background: linear-gradient(135deg, var(--cyan), var(--blue));
-  opacity: 0.16;
-  transform: rotate(3deg);
-  transition: 0.7s;
-}
-
-.about-image:hover::before {
-  transform: rotate(0deg) scale(0.98);
-}
-
 .about-image img {
   position: relative;
   z-index: 1;
@@ -593,11 +581,6 @@ img {
   object-position: center center;
   border-radius: 46px;
   display: block;
-  transition: 1s;
-}
-
-.about-image:hover img {
-  transform: scale(1.07);
 }
 
 .year-card {
@@ -1477,7 +1460,7 @@ img {
   position: relative;
   width: 100%;
   height: 360px;
-  background: #fff;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1517,35 +1500,15 @@ img {
 
 .clickable-image {
   position: relative;
-  cursor: zoom-in;
-  touch-action: manipulation;
+  pointer-events: none;
 }
 
 .clickable-image img {
   transition: transform 0.35s ease;
 }
 
-.clickable-image:hover img {
-  transform: scale(1.025);
-}
-
 .image-zoom-hint {
-  position: absolute;
-  right: 14px;
-  bottom: 14px;
-  padding: 7px 11px;
-  border-radius: 8px;
-  background: rgba(0, 0, 0, 0.72);
-  color: #fff;
-  font-size: 11px;
-  font-weight: 700;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-
-.clickable-image:hover .image-zoom-hint {
-  opacity: 1;
+  display: none;
 }
 
 /* =========================================================
@@ -1630,27 +1593,28 @@ img {
 .footer {
   background: #070c18;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 70px 0 25px;
+  padding: 30px 0 14px;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 50px;
-  padding-bottom: 45px;
+  gap: 36px;
+  padding-bottom: 18px;
 }
 
 .footer-brand p {
   color: #8795ac;
   max-width: 530px;
-  line-height: 1.7;
-  font-size: 14px;
+  line-height: 1.6;
+  font-size: 13.5px;
+  margin: 10px 0 12px;
 }
 
 .footer-contact {
   display: grid;
-  gap: 12px;
-  margin-top: 25px;
+  gap: 8px;
+  margin-top: 12px;
 }
 
 .footer-contact div {
@@ -1658,7 +1622,7 @@ img {
   gap: 10px;
   color: #9ba9bf;
   font-size: 13px;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 .footer-contact svg {
@@ -1673,7 +1637,7 @@ img {
   font-weight: 900;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin: 0 0 18px;
+  margin: 0 0 12px;
 }
 
 .footer-list {
@@ -1681,7 +1645,7 @@ img {
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 13px;
+  gap: 9px;
   color: #9ba9bf;
   font-size: 13px;
 }
@@ -1700,11 +1664,12 @@ img {
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 22px;
+  padding-top: 12px;
+  margin-top: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 16px;
   color: #65738a;
   font-size: 11px;
 }
@@ -1760,12 +1725,13 @@ img {
   }
 
   .hero-visual {
-    min-height: 440px;
+    min-height: 500px;
   }
 
   .hero-image-wrap {
-    width: min(100%, 560px);
-    height: 460px;
+    width: min(100%, 620px);
+    height: 500px;
+    margin: 0 auto;
   }
 
   .about-grid,
@@ -1839,6 +1805,11 @@ img {
     height: 72px;
   }
 
+  .brand-logo {
+    width: 180px;
+    height: 50px;
+  }
+
   .nav-links {
     display: none;
   }
@@ -1897,12 +1868,13 @@ img {
   }
 
   .hero-visual {
-    min-height: 420px;
+    min-height: 460px;
   }
 
   .hero-image-wrap {
-    width: min(100%, 520px);
-    height: 430px;
+    width: min(100%, 560px);
+    height: 460px;
+    margin: 0 auto;
   }
 
   .hero-features,
@@ -1935,6 +1907,8 @@ img {
 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding-bottom: 16px;
   }
 
   .footer-brand {
@@ -2070,8 +2044,8 @@ img {
   }
 
   .brand-logo {
-    width: 42px;
-    height: 42px;
+    width: 150px;
+    height: 40px;
   }
 
   .brand-name {
@@ -2142,14 +2116,15 @@ img {
   }
 
   .hero-visual {
-    min-height: 330px;
-    margin-top: 5px;
+    min-height: 380px;
+    margin-top: 8px;
   }
 
   .hero-image-wrap {
     width: 100%;
-    max-width: 420px;
-    height: 330px;
+    max-width: 450px;
+    height: 380px;
+    margin: 0 auto;
   }
 
   .hero-glow {
@@ -2389,11 +2364,12 @@ img {
     width: 100%;
     height: 330px !important;
     min-height: 330px !important;
-    background: #fff !important;
+    background: transparent !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     overflow: hidden !important;
+    pointer-events: auto !important;
   }
 
   .recognition-image img {
@@ -2568,6 +2544,8 @@ img {
 
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+    padding-bottom: 14px;
   }
 
   .footer-brand {
@@ -2577,6 +2555,8 @@ img {
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 10px;
+    padding-top: 10px;
   }
 }
 
@@ -2606,11 +2586,14 @@ img {
   }
 
   .hero-image-wrap {
-    height: 285px;
+    width: 100%;
+    max-width: 350px;
+    height: 320px;
+    margin: 0 auto;
   }
 
   .hero-visual {
-    min-height: 285px;
+    min-height: 320px;
   }
 
   .hero-actions .btn {
@@ -2714,5 +2697,164 @@ img {
 
   .form-card {
     padding: 22px 15px;
+  }
+}
+/* Footer KHARE Logo - Blue */
+.footer .brand-logo img {
+  filter: brightness(0) saturate(100%) invert(46%) sepia(98%) saturate(1900%)
+    hue-rotate(166deg) brightness(92%) contrast(101%);
+}
+/* Compact Footer Height */
+.footer {
+  padding-top: 28px;
+  padding-bottom: 14px;
+}
+
+/* Footer Bottom Layout */
+.footer-bottom {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 14px;
+  padding-top: 12px;
+  margin-top: 12px;
+}
+
+/* Copyright - Left */
+.footer-copyright {
+  justify-self: start;
+  font-size: 12px;
+}
+
+/* Website Links - Center */
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 12px;
+}
+
+/* DataGenixAI - Bottom Right */
+.footer-credit {
+  justify-self: end;
+  color: #00bfff;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.footer-credit:hover {
+  color: #ffffff;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 24px;
+    padding-bottom: 12px;
+  }
+
+  .footer-grid {
+    gap: 20px;
+    padding-bottom: 12px;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 10px;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+
+  .footer-copyright,
+  .footer-links,
+  .footer-credit {
+    justify-self: center;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 10px 16px;
+  }
+}
+
+/* =========================================================
+   FIXED WHATSAPP FLOATING BUTTON
+========================================================= */
+
+.whatsapp-float {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #25d366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.35), 0 4px 16px rgba(37, 211, 102, 0.45), 0 2px 8px rgba(0, 0, 0, 0.35);
+  z-index: 9999;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease, background-color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.whatsapp-float:hover {
+  background-color: #20ba5a;
+  transform: scale(1.08) translateY(-3px);
+  box-shadow: 0 0 0 5px rgba(37, 211, 102, 0.45), 0 8px 24px rgba(37, 211, 102, 0.6), 0 4px 12px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+}
+
+.whatsapp-float:active {
+  transform: scale(0.96) translateY(0);
+}
+
+.whatsapp-float svg,
+.whatsapp-float .whatsapp-icon {
+  width: 32px;
+  height: 32px;
+  fill: #ffffff;
+  color: #ffffff;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    right: 20px;
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+    width: 54px;
+    height: 54px;
+    box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.35), 0 4px 14px rgba(37, 211, 102, 0.42), 0 2px 6px rgba(0, 0, 0, 0.35);
+  }
+
+  .whatsapp-float svg,
+  .whatsapp-float .whatsapp-icon {
+    width: 29px;
+    height: 29px;
+  }
+}
+
+@media (max-width: 400px) {
+  .whatsapp-float {
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 0 2.5px rgba(37, 211, 102, 0.35), 0 4px 12px rgba(37, 211, 102, 0.4);
+  }
+
+  .whatsapp-float svg,
+  .whatsapp-float .whatsapp-icon {
+    width: 27px;
+    height: 27px;
   }
 }
