@@ -1,19 +1,43 @@
 "use client";
+import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import Icon from "./Icon";
+import {
+  buildInquiryTemplateParams,
+  EMAILJS_CONFIG,
+} from "@/lib/emailjs";
 
 export default function InquiryForm() {
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState(false);
+  const [error, setError] = useState("");
 
   const submit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 900));
-    setLoading(false);
-    e.currentTarget.reset();
-    setToast(true);
-    setTimeout(() => setToast(false), 4000);
+    setError("");
+
+    const form = e.currentTarget;
+
+    try {
+      await emailjs.send(
+        EMAILJS_CONFIG.serviceId,
+        EMAILJS_CONFIG.templateId,
+        buildInquiryTemplateParams(form),
+        { publicKey: EMAILJS_CONFIG.publicKey }
+      );
+
+      form.reset();
+      setToast(true);
+      setTimeout(() => setToast(false), 4000);
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      setError(
+        "We could not send your inquiry. Please try again or email us directly."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -110,13 +134,17 @@ export default function InquiryForm() {
               <div className="form-grid">
                 <div className="field">
                   <label>Contact Name</label>
-                  <input name="name" placeholder="John Doe" required />
+                  <input
+                    name="contact_name"
+                    placeholder="John Doe"
+                    required
+                  />
                 </div>
 
                 <div className="field">
                   <label>Organization</label>
                   <input
-                    name="company"
+                    name="organization"
                     placeholder="Energy Solutions Corp"
                     required
                   />
@@ -126,7 +154,7 @@ export default function InquiryForm() {
               <div className="field">
                 <label>Corporate Email</label>
                 <input
-                  name="email"
+                  name="corporate_email"
                   type="email"
                   placeholder="john@company.com"
                   required
@@ -135,7 +163,7 @@ export default function InquiryForm() {
 
               <div className="field">
                 <label>Project Type</label>
-                <select name="type" defaultValue="" required>
+                <select name="project_type" defaultValue="" required>
                   <option value="" disabled>
                     Select interest
                   </option>
@@ -149,11 +177,17 @@ export default function InquiryForm() {
               <div className="field">
                 <label>Project Requirements</label>
                 <textarea
-                  name="message"
+                  name="project_requirements"
                   placeholder="Include kVA, primary/secondary voltage, and specific site conditions..."
                   required
                 />
               </div>
+
+              {error ? (
+                <p className="form-error" role="alert">
+                  {error}
+                </p>
+              ) : null}
 
               <button className="form-submit" type="submit" disabled={loading}>
                 {loading ? (
