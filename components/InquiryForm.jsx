@@ -95,8 +95,8 @@ export default function InquiryForm() {
                 <div>
                   <h4>Office &amp; Works</h4>
                   <p>
-                    Plot No. 12, 19, Tasgaon Industrial Estate Co. Operative
-                    Society Ltd., Tasgaon : 416 312 Dist : Sangli, M.S. INDIA
+                    Plot No. 12, 19 Tasgaon Industrial Estate, Tasgaon Sangli,
+                    Maharashtra, India
                   </p>
                 </div>
               </div>

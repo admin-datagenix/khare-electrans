@@ -26,7 +26,8 @@ export default function Footer() {
               <div>
                 <Icon name="map" />
                 <span>
-                  Plot No. 12, 19 Tasgaon Industrial Estate, Sangli, India
+                  Plot No. 12, 19 Tasgaon Industrial Estate, Tasgaon Sangli,
+                  Maharashtra, India
                 </span>
               </div>
 
